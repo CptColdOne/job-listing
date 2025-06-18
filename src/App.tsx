@@ -1,16 +1,26 @@
 import styles from './App.module.sass';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import data from '../src/mock/data.json';
+import { addPositions } from './store/positions/positionActions';
+import JobList from './components/JobList';
+import JobFilters from './components/JobFilters';
 
 function App() {
-  return (
-    <div className={styles.app}>
-      <header className={styles.appHeader}>
-        <h1>Job Listing</h1>
-      </header>
-      <main className={styles.appMain}>
-        <p>Welcome to Job Listing App</p>
-      </main>
-    </div>
-  );
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(addPositions(data));
+	}, []);
+
+	return (
+		<>
+			<div className={styles.app}>
+				<JobFilters />
+				<JobList />
+			</div>
+		</>
+	);
 }
 
 export default App;
