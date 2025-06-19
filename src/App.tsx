@@ -16,8 +16,11 @@ function App() {
 	return (
 		<>
 			<div className={styles.app}>
-				<JobFilters />
-				<JobList />
+				<header className={styles.header}></header>
+				<div className={styles.content}>
+					<JobFilters />
+					<JobList />
+				</div>
 			</div>
 		</>
 	);

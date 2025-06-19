@@ -20,7 +20,7 @@ const JobPosition = ({ position, onFilterClick }: JobPositionProps) => {
 	return (
 		<div className={styles.content}>
 			<div className={styles.info}>
-				<img src={position.logo} />
+				<img className={styles.logo} src={position.logo} />
 				<div className={styles.description}>
 					<div className={styles.company}>
 						<div className={styles.name}>{position.company}</div>
@@ -32,7 +32,9 @@ const JobPosition = ({ position, onFilterClick }: JobPositionProps) => {
 					<div className={styles.position}>{position.position}</div>
 					<div className={styles.job_info}>
 						<div>{position.postedAt}</div>
+						<div className={styles.dot} />
 						<div>{position.contract}</div>
+						<div className={styles.dot} />
 						<div>{position.location}</div>
 					</div>
 				</div>

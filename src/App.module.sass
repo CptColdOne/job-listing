@@ -1,7 +1,25 @@
 .app 
-    width: 100vw
-    height: 100vh
+    width: 100%
+    min-height: 100vh
     display: flex
-    justify-content: center
+    flex-direction: column
+    background-color: var(--grey-100)
+
+.header
+    height: 156px
+    width: 100%
+    background-image: url('./assets/images/bg-header-desktop.svg')
+    background-color: var(--primary)
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    @media (max-width: 1000px)
+        background-image: url('./assets/images/bg-header-mobile.svg')
+
+.content
+    display: flex
     flex-direction: column
     align-items: center
+    width: 100%
+    padding-bottom: 50px
+    

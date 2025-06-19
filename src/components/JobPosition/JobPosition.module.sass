@@ -7,14 +7,32 @@
     width: 100%
     align-items: center
     justify-content: space-between
+    box-shadow: var(--shadow)
 
     &:hover
         border-left: 4px solid var(--primary)
+
+    @media (max-width: 1000px)
+        flex-direction: column
+        align-items: flex-start
 
 .info
     display: flex
     align-items: center
     gap: 10px
+
+    @media (max-width: 1000px)
+        padding-bottom: 20px
+        border-bottom: 2px solid var(--grey-800)
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+
+.logo
+    @media (max-width: 1000px)
+        margin-top: -30px
+        width: 50px
+        height: 50px
 
 .description
     display: flex
@@ -49,7 +67,7 @@
 .position
     font-size: 20px
     font-weight: var(--fw-bold)
-    color: var(--primary)
+    color: var(--grey-900)
 
 .job_info
     display: flex
@@ -82,3 +100,10 @@
     &_selected
         background-color: var(--primary)
         color: #fff
+
+.dot
+  width: 4px
+  height: 4px
+  border-radius: 50%
+  background-color: var(--grey-800)
+  align-self: center
